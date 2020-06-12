@@ -21,35 +21,12 @@ pod 'YCSymbolTracker'
 
 If you want to track symbols of other static/dynamic libraries, you have to add more lines to your Podfile:
 
-If using **use_frameworks!**
-
 ```ruby
 post_install do |installer|
     require './Pods/YCSymbolTracker/YCSymbolTracker/symbol_tracker.rb'
     symbol_tracker(installer)
 end
 ```
-
-else 
-
-You have to make sure that **YCSymbolTracker is a dynamic framework**.
-
-There is a simple way to do that:
-
-install [cocoapods-packing-cubes](https://github.com/segiddins/cocoapods-packing-cubes):
-
-```shell
-$ gem install cocoapods-packing-cubes
-```
-
-add the following lines to your Podfile:
-
-```ruby
-plugin 'cocoapods-packing-cubes',
-'YCSymbolTracker' => { 'linkage' => 'dynamic', 'packaging' => 'framework' }
-```
-
-end
 
 ## Example
 
@@ -105,28 +82,11 @@ pod 'YCSymbolTracker'
 
 如果需要跟踪其他三方库的符号，需要添加下面的代码:
 
-① 如果在Podfile中使用了**use_frameworks!** (Pods使用动态库)
-
 ```ruby
 post_install do |installer|
     require './Pods/YCSymbolTracker/YCSymbolTracker/symbol_tracker.rb'
     symbol_tracker(installer)
 end
-```
-
-② 如果不使用**use_frameworks!** (Pods使用静态库)，那么我们需要保证**YCSymbolTracker**是动态库。
-
-安装pods的插件 [cocoapods-packing-cubes](https://github.com/segiddins/cocoapods-packing-cubes) 可以轻松地搞定这个问题：
-
-```shell
-$ gem install cocoapods-packing-cubes
-```
-
-然后在Podfile中添加下面的代码，指定**YCSymbolTracker**为动态库：
-
-```ruby
-plugin 'cocoapods-packing-cubes',
-'YCSymbolTracker' => { 'linkage' => 'dynamic', 'packaging' => 'framework' }
 ```
 
 ## 教程
