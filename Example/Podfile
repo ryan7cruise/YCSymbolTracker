@@ -1,0 +1,22 @@
+platform :ios, '8.0'
+
+# if use_frameworks!
+
+use_frameworks!
+
+# else
+
+#plugin 'cocoapods-packing-cubes',
+#'YCSymbolTracker' => { 'linkage' => 'dynamic', 'packaging' => 'framework' }
+
+# end
+
+target 'Demo' do
+  pod 'SDWebImage'
+  pod 'YCSymbolTracker', :path => '../'
+end
+
+post_install do |installer|
+    require '../YCSymbolTracker/symbol_tracker.rb'
+    symbol_tracker(installer)
+end
