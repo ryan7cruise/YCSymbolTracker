@@ -16,6 +16,7 @@
 
 + (void)load {
     NSLog(@"%s", __FUNCTION__);
+    test();
 }
 
 void(^block)(void) = ^(void){

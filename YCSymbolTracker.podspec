@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YCSymbolTracker'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Track symbols.'
   s.homepage         = 'http://git.intra.weibo.com/CD_PODS/YCLaunchSymbolTracker'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
