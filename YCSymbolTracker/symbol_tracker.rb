@@ -52,7 +52,7 @@ def pods_target_config(pods_project, name, symbol_tracker_target)
                     key = pair[0]
                     value = pair[1]
                     if config.build_settings[key].nil?
-                        config.build_settings[key] = ['']
+                        config.build_settings[key] = ['$(inherited)']
                     end
                     if !config.build_settings[key].include?(value)
                         config.build_settings[key] << value
