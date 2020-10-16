@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YCSymbolTracker'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Track symbols.'
   s.homepage         = 'https://github.com/ryan7cruise/YCSymbolTracker'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
