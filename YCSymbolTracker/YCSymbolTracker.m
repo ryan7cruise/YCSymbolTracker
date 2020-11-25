@@ -39,7 +39,7 @@ typedef struct {
 } SymbolNode;
 
 void __sanitizer_cov_trace_pc_guard(uint32_t *guard) {
-//    if (!*guard) return;  // Duplicate the guard check.
+    if (!*guard) return;  // Duplicate the guard check.
     
     void *PC = __builtin_return_address(0);
     
