@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YCSymbolTracker'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'Track symbols.'
   s.homepage         = 'https://github.com/ryan7cruise/YCSymbolTracker'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -26,8 +26,8 @@ Pod::Spec.new do |s|
   
   s.ios.user_target_xcconfig = {
     'ENABLE_BITCODE' => 'NO',
-    'OTHER_CFLAGS' => '-fsanitize-coverage=func,trace-pc-guard',
-    'OTHER_SWIFT_FLAGS' => '-sanitize=undefined -sanitize-coverage=func'
+    'OTHER_CFLAGS' => '$(inherited) -fsanitize-coverage=func,trace-pc-guard',
+    'OTHER_SWIFT_FLAGS' => '$(inherited) -sanitize=undefined -sanitize-coverage=func'
   }
 
 end

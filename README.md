@@ -1,6 +1,6 @@
 # YCSymbolTracker
 
-[![CocoaPods](https://img.shields.io/badge/pod-0.1.2-green.svg)](https://github.com/ryan7cruise/YCSymbolTracker)
+[![CocoaPods](https://img.shields.io/badge/pod-0.1.3-green.svg)](https://github.com/ryan7cruise/YCSymbolTracker)
 [![Platform](https://img.shields.io/badge/platform-iOS-green.svg)](https://github.com/ryan7cruise/YCSymbolTracker)
 [![Support](https://img.shields.io/badge/support-iOS%208.0%2B-green.svg)](https://github.com/ryan7cruise/YCSymbolTracker)
 [![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/ryan7cruise/YCSymbolTracker/blob/master/LICENSE)
